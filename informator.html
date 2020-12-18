@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Книги</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/flexslider.css"/>
+<link rel="stylesheet" href="css/jquery.fancybox.css"/>
+<!--<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>-->
+<!-- кастомный скроллбар в информере -->
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar_informer.css"/>
+<link rel="stylesheet" href="css/new.css">
+<!-- Новые стили -->
+<link rel="stylesheet" href="css/notifications.css">
+<!-- Уведомления в header'e -->
+<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/vendor/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery.knob.js"></script>
+<!-- скрипт круговой диаграмы оценки книги -->
+<script src="js/jquery.mCustomScrollbar.min.js"></script>
+<!-- кастомный скролбар в поиске -->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dropbox.js"></script>
+<!-- Кастомный select, (на странице каталога выбор жанра) -->
+<script src="js/profile.js"></script>
+<!-- Выпадающее меню профиля в хедере -->
+<!-- Скролл для информера -->
+<script src="js/scroll-informer.js"></script>
+</head>
+<body class="">
+<div class="page-wrapper inner">
+  <header class="top-panel inner clearfix">
+    <div class="wrapper">
+      <div class="header--logo"><a href="#" title="Readly - найди свою книгу"></a></div>
+      <div class="search-form _top">
+        <form action="#">
+          <fieldset>
+            <div class="search-block--text-input">
+              <input class="" type="text" placeholder="Поиск книги или автора..."/>
+              <input class="search-block--input-btn" type="button" value="НАЙТИ"/>
+            </div>
+          </fieldset>
+        </form>
+        <div class="search-dropdown" id="searchDropdown"> 
+          <!-- Search results --> 
+        </div>
+      </div>
+      <!--Notifications-->
+      <div class="header--notifications header--notifications-active">
+        <div class="header-notifications--toggler"><span class="header-notifications--counter"></span> </div>
+        
+        
+        <div class="header-notifications--dropdown">
+          <div class="notifications-header clearfix"> <span class="notifications-header-title">Уведомления:</span><span class="notifications-header-counter">3</span> </div>
+          <div id="header-informer" class="notifications-index-scroll">
+            <ul class="notifications-list">
+              <li> <a class="delete-notification" href="#" title="Удалить!"></a><a class="notification-name" href="#">Подсказка</a>
+                <div class="notification-text">Поздравляем! Вы только что зарегистрировались на Readly,  для ознакомления работы с сервисом 
+                  рекомендуем ознакомиться с <a href="#">инструкцией</a>.</div>
+              </li>
+              <li> <a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name" href="#">Новости</a>
+                <div class="notification-text">Уважаемые читатели! Добавлена новая <a href="#">подборка книг</a> с неожиданными концовками</div>
+              </li>
+              <li> <a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name" href="#">Подсказка</a>
+                <div class="notification-text">Добавляйте книги к себе в прочитанное. Чем больше книг Вы прочитали, тем точнее становятся рекомендации.</div>
+              </li>
+              <li> <a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name" href="#">Подсказка</a>
+                <div class="notification-text">Поздравляем! Вы только что зарегистрировались
+                  на Readly,  для ознакомления работы с сервисом 
+                  рекомендуем ознакомиться с <a href="#">инструкцией</a>.</div>
+              </li>
+              <li> <a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name" href="#">Новости</a>
+                <div class="notification-text">Уважаемые читатели! Добавлена новая <a href="#">подборка книг</a> с неожиданными концовками</div>
+              </li>
+              <li> <a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name" href="#">Подсказка</a>
+                <div class="notification-text">Добавляйте книги к себе в прочитанное. Чем больше книг Вы прочитали, тем точнее становятся рекомендации.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="notifications-header-footer"> <a href="#">Очистить историю</a> </div>
+        </div>
+      </div>
+      <!--End Notifications-->
+      
+      <div class="header--profile">
+        <div class="header-profile--toggler"><i class="header-profile--menu-icon"></i>
+          <div class="header-profile--ava"><img src="img/content/user-ava_73px.jpg" alt="User"/></div>
+          <span class="header-profile--counter">3</span></div>
+        <div class="header-profile--dropdown">
+          <ul class="profile-dropdown-menu">
+            <li><a href="#"><i class="icon activity"></i>Активность<span
+                                class="counter">352</span></a></a></li>
+            <li><a href="#"><i class="icon reviews"></i> Рецензии <span class="counter">5</span></a></li>
+            <li><a href="#"><i class="icon discussion"></i> Обсуждения <span
+                                class="counter">48</span></a></a></li>
+            <li><a href="#"><i class="icon settings"></i> Настройки</a></li>
+            <li><a href="#"><i class="icon logout"></i> Выйти</a></li>
+          </ul>
+        </div>
+        <div class="header-profile--label">Мои книги</div>
+      </div>
+    </div>
+  </header>
+  <header class="sub-header">
+    <div class="wrapper clearfix">
+      <nav class="header--nav">
+        <ul>
+          <li><a href="#" class="active">КНИГИ</a></li>
+          <li><a href="#">РЕКОМЕНДАЦИИ</a></li>
+          <li><a href="#">СПИСКИ</a></li>
+          <li><a href="#">ЧИТАТЕЛИ</a></li>
+          <li><a href="#">ОБСУЖДЕНИЯ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="content-header clearfix">
+    <div class="content-header-index">
+      <h1>Поздравляем Вы теперь часть проекта</h1>
+      <p>Мы рады, что вы решили присоединиться к Ридли. Предлагаем ознакомиться с возможностями сервиса и начать
+        пользоваться его преимуществами.</p>
+    </div>
+  </div>
+  <div class="wrapper content clearfix">
+    <ul class="task-list clearfix">
+      <li class="clearfix"><img src="img/icons/icon-library.png" width="160" height="160">
+        <div class="tasks-list-index"><a href="#">
+          <h3>Собери свою библиотеку</h3>
+          </a>
+          <p>Добавляйте книги на полки и вы никогда не забудете, что прочли и что хотите прочитать. Не
+            забывайте указывать дату прочтения книги - это поможет вам планировать свое чтение.</p>
+        </div>
+      </li>
+      <li class="clearfix"><img src="img/icons/icon-rating.png" width="162" height="160">
+        <div class="tasks-list-index"><a href="#">
+          <h3>Оцените книги, которые прочли</h3>
+          </a>
+          <p>После того, как вы добавите книги на полки, не забудьте оценить те, которые уже прочли, чтобы
+            всегда помнить, какая книга вам понравилась, а какая нет. Оценки помогают пользователям
+            соориентироваться в каталоге и найти интересную книгу.</p>
+        </div>
+      </li>
+      <li class="clearfix"><img src="img/icons/icon-recommendations.png" width="160" height="160">
+        <div class="tasks-list-index"><a href="#">
+          <h3>Получите персональные рекомендации</h3>
+          </a>
+          <p>Чем больше книг вы оценили и добавили в прочитанное, тем более точнее будут рекомендации.</p>
+        </div>
+      </li>
+      <li><img src="img/icons/icon-friend.png" width="160" height="160">
+        <div class="tasks-list-index"><a href="#">
+          <h3>Найдите друзей по интересам</h3>
+          </a>
+          <p>Найдите среди читателей друзей по интересам, обсуждайте с ними любимые книги, следите за тем, что
+            они читают. </p>
+        </div>
+      </li>
+    </ul>
+    <div class="goto-profile"><a href="#" class="button-green">Перейти в свой профиль</a></div>
+  </div>
+</div>
+<footer>
+  <div class="wrapper">
+    <div class="footer--logo"><a href="#" title="Readly - найди свою книгу"></a></div>
+    <nav class="footer--nav"><a href="#">КНИГИ</a> <a href="#">РЕКОМЕНДАЦИИ</a> <a href="#">СПИСКИ</a> <a href="#">ЧИТАТЕЛИ</a> <a href="#">ОБСУЖДЕНИЯ</a></nav>
+    <div class="footer--copyright"> EQWILE © 2013</div>
+  </div>
+</footer>
+</body>
+</html>

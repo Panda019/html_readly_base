@@ -1,0 +1,59 @@
+.start-discussion-input-layer-drop {
+    padding: 20px 2px 0;
+}
+
+a.add-discussion {
+    font-size: 13px;
+    color: #222222;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.add-discusiion-header {
+}
+
+.add-discusiion-header-input {
+    float: left;
+    width: 514px;
+}
+
+a.delete-header-input {
+    font-size: 13px;
+    color: #222222;
+    margin-top: 8px;
+    display: block;
+    margin-left: 14px;
+    float: left;
+}
+
+.start-dicsussion-action-block {
+}
+
+.start-dicsussion-action-block-item {
+    float: left;
+    margin-top: 10px;
+}
+
+.start-dicsussion-action-block-item input[type=checkbox] {
+    margin-top: 4px;
+    float: left;
+    margin-right: 6px;
+}
+
+.start-dicsussion-action-block-item label {
+    color: #7d7d7d;
+    font-size: 13px;
+}
+
+a.cansel-discussion {
+    float: right;
+    display: block;
+    color: #7d7d7d;
+    margin-right: 22px;
+    margin-top: 10px;
+    line-height: 100%;
+}
+
+a.cansel-discussion:hover {
+    border-bottom: 1px solid #7d7d7d;
+}

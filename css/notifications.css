@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS Document */
+
+.header--notifications {
+	float: left;
+	margin-left: 7px;
+	margin-top: 14px;
+	width: 49px;
+	height: 37px;
+	background-color: #594d55;
+	border-radius: 3px;
+	background-image: url(../img/header-notifications-icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.header--notifications-active {
+	background-color: #72666e;
+}
+.header--notifications-active:hover {
+	background-color: #696c84;
+}
+.header-notifications--counter {
+	display: inline-block;
+	position: absolute;
+	left: 43px;
+	top: -4px;
+	font-size: 13px;
+	line-height: 20px;
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+	color: #fff;
+	text-align: center;
+	background: #e84c3d;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+.header-notifications--counter:before {
+	content: '*';
+}
+.header-notifications--toggler {
+	float: right;
+	position: relative;
+	width: 49px;
+	height: 37px;
+	cursor: pointer;
+}
+.header-notifications--dropdown {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	position: absolute;
+	top: 78px;
+	right: 100px;
+	border-radius: 4px;
+	background-color: rgb(255,255,255);
+	width: 381px;
+	/* Firefox v3.5+ */
+	-moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.5);
+	/* Safari v3.0+ and by Chrome v0.2+ */
+	-webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.5);
+	/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.5);
+	-ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX = 0,OffY = 0,Color = #80000000,Positive = true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX = 0, OffY = 0, Color = #80000000, Positive = true);
+}
+.header-notifications--dropdown:before {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #58687D;
+	border-image: none;
+	border-style: solid;
+	border-width: 9px;
+	content: " ";
+	display: block;
+	height: 0;
+	position: absolute;
+	right: 70px;
+	top: -18px;
+}
+.header--notifications._opened .header-notifications--dropdown {
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+}
+.notifications-header {
+	background-color: #58687d;
+	height: 41px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.notifications-header-title {
+	display: block;
+	float: left;
+	color: #FFF;
+	font-size: 13px;
+	margin-left: 25px;
+	margin-top: 10px;
+	float: left;
+}
+.notifications-header-counter {
+	display: inline-block;
+	float: left;
+	font-size: 10px;
+	line-height: 10px;
+	min-width: 10px;
+	padding: 4px;
+	border-radius: 18px;
+	color: #fff;
+	text-align: center;
+	background: #fb6e52;
+	margin-left: 5px;
+	margin-top: 11px;
+}
+.notifications-index-scroll {
+	padding-top: 17px;
+	padding-bottom: 11px;
+	max-height: 275px;
+	display: block;
+	border-left: 1px solid #c2c5cf;
+	border-right: 1px solid #c2c5cf;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+.notifications-header-footer {
+	background-color: #e8e9f1;
+	height: 32px;
+	line-height: 200%;
+	text-align: center;
+	border: 1px solid #c2c5cf;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.notifications-header-footer a {
+	color: #383838;
+	font-size: 14px;
+}
+.notifications-header-footer a:hover {
+	color: #1D648D;
+}
+ul.notifications-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.notifications-list li {
+	font-family: "Myriad Pro";
+	border-bottom: 1px solid #c2c5cf;
+	font-size: 12px;
+	color: #242424;
+	padding-bottom: 18px;
+	padding-top: 6px;
+	margin-bottom: 12px;
+}
+ul.notifications-list li a.notification-name {
+	display: block;
+	float: left;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+}
+ul.notifications-list li .notification-text a {
+	color: #5b79c3;
+}
+ul.notifications-list li .notification-text {
+	padding-top: 5px;
+	font-size: 14px;
+	letter-spacing: 0pt;
+	line-height: 129%;
+	color: rgb(36,36,36);
+	text-align: left;
+	clear: left;
+	display: block;
+	position: relative;
+}
+ul.notifications-list li .delete-notification {
+	display: none;
+	background-image: url(../img/icon-delete-notification.png);
+	width: 14px;
+	height: 14px;
+	float: right;
+	margin-top: 4px;
+}
+ul.notifications-list li:hover .delete-notification {
+	display: block;
+}
+.toggler-active {
+	background-image: url(../img/header-notifications-icon.png);
+	background-color: #696c84;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 3px;
+}

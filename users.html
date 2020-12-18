@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Книги</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/flexslider.css"/>
+        <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery.flexslider-min.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script src="js/jquery.knob.js"></script> <!-- скрипт круговой диаграмы оценки книги -->
+        <script src="js/jquery.mCustomScrollbar.min.js"></script> <!-- кастомный скролбар в поиске -->
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/dropbox.js"></script> <!-- Кастомный select, (на странице каталога выбор жанра) -->
+        <script src="js/profile.js"></script> <!-- Выпадающее меню профиля в хедере -->
+
+    </head>
+    <body class="">
+
+        <div class="page-wrapper inner">
+
+            <header class="top-panel inner clearfix">
+                <div class="wrapper">
+
+                    <div class="header--logo">
+                        <a href="#" title="Readly - найди свою книгу"></a>
+                    </div>
+
+                    <div class="search-form _top">
+                        <form action="#">
+                            <fieldset>
+                                <div class="search-block--text-input">
+                                    <input class="" type="text" placeholder="Поиск книги или автора..."/>
+                                    <input class="search-block--input-btn" type="button" value="НАЙТИ"/>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                        <div class="search-dropdown" id="searchDropdown">
+                            <!-- Search results -->
+                        </div>
+                    </div>
+
+                    <div class="header--profile">
+                        <div class="header-profile--toggler">
+                            <i class="header-profile--menu-icon"></i>
+                            <div class="header-profile--ava">
+                                <img src="img/content/user-ava_73px.jpg" alt="User"/>
+                            </div>
+                            <span class="header-profile--counter">3</span>
+                        </div>
+                        <div class="header-profile--dropdown">
+                            <ul class="profile-dropdown-menu">
+                                <li><a href="#"><i class="icon activity"></i> Активность <span class="counter">352</span></a></a></li>
+                                <li><a href="#"><i class="icon reviews"></i> Рецензии <span class="counter">5</span></a></li>
+                                <li><a href="#"><i class="icon discussion"></i> Обсуждения <span class="counter">48</span></a></a></li>
+                                <li><a href="#"><i class="icon settings"></i> Настройки</a></li>
+                                <li><a href="#"><i class="icon logout"></i> Выйти</a></li>
+                            </ul>
+                        </div>
+                        <div class="header-profile--label">Мои книги</div>
+                    </div>
+                </div>
+            </header>
+
+            <header class="sub-header">
+                <div class="wrapper clearfix">
+                    <nav class="header--nav">
+                        <ul>
+                            <li><a href="#" class="active">КНИГИ</a></li>
+                            <li><a href="#">РЕКОМЕНДАЦИИ</a></li>
+                            <li><a href="#">СПИСКИ</a></li>
+                            <li><a href="#">ЧИТАТЕЛИ</a></li>
+                            <li><a href="#">ОБСУЖДЕНИЯ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+
+            <div class="wrapper content clearfix">
+
+                <aside class="page-culumn-aside _right">
+
+                    <h3 class="aside--menu-title _underlined">Фильтры</h3>
+
+                    <div class="ufilter-form">
+
+                        <div class="select-box _big _fr">
+                            <div class="select-box--current">
+                                <span>Все страны</span>
+                            </div>
+                            <div class="dropdown-box _select">
+                                <nav class="dropdown-select-options">
+                                    <a href="#">Город 1</a>
+                                    <a href="#">Город 2</a>
+                                    <a href="#">Город 3</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="select-box _big _fr">
+                            <div class="select-box--current">
+                                <span>Все города</span>
+                            </div>
+                            <div class="dropdown-box _select">
+                                <nav class="dropdown-select-options">
+                                    <a href="#">Город 1</a>
+                                    <a href="#">Город 2</a>
+                                    <a href="#">Город 3</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="ufilter-form--input">
+                            <input class="form-input" type="text" placeholder="Начните вводить имя...">
+                        </div>
+
+                        <div class="ufilter-form--buttons">
+                            <a href="#" class="btn-violet">Поиск</a>
+                            <a href="#" class="ufilter-form--reset">Сбросить</a>
+                        </div>
+
+                    </div>
+
+                    <br/>
+
+                    <h3 class="aside--menu-title _underlined">Близкие по духу</h3>
+
+                    <div class="congenial_users">
+
+                        <article class="fl-item">
+                            <figure>
+                                <a href="#">
+                                    <img class="fli-ava" src="img/content/ava_003.png" alt="Екатерина Катина (@katya)">
+                                </a>
+                            </figure>
+                            <div class="fli-content">
+                                <a href="#" class="fli--user-name">
+                                    <span class="fli-nickname">katya</span>
+                                    <span class="fli-fullname">Екатерина Катина</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="fl-item">
+                            <figure>
+                                <a href="#">
+                                    <img class="fli-ava" src="img/content/ava_004.gif" alt="Екатерина Катина (@katya)">
+                                </a>
+                            </figure>
+                            <div class="fli-content">
+                                <a href="#" class="fli--user-name">
+                                    <span class="fli-nickname">katya</span>
+                                    <span class="fli-fullname">Екатерина Катина</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="fl-item">
+                            <figure>
+                                <a href="#">
+                                    <img class="fli-ava" src="img/content/ava_002.png" alt="Екатерина Катина (@katya)">
+                                </a>
+                            </figure>
+                            <div class="fli-content">
+                                <a href="#" class="fli--user-name">
+                                    <span class="fli-nickname">katya</span>
+                                    <span class="fli-fullname">Екатерина Катина</span>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer--logo">
+                <a href="#" title="Readly - найди свою книгу"></a>
+            </div>
+
+            <nav class="footer--nav">
+                <a href="#">КНИГИ</a>
+                <a href="#">РЕКОМЕНДАЦИИ</a>
+                <a href="#">СПИСКИ</a>
+                <a href="#">ЧИТАТЕЛИ</a>
+                <a href="#">ОБСУЖДЕНИЯ</a>
+            </nav>
+
+            <div class="footer--copyright">
+                EQWILE © 2013
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>

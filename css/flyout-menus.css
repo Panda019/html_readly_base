@@ -1,0 +1,509 @@
+html {
+    -webkit-animation: safariSelectorFix infinite 1s;
+}
+
+@-webkit-keyframes safariSelectorFix {
+0% {zoom:1;}
+100% {zoom:1;}
+}
+/*Фильтр на вкладке*/
+.filter-params .fly-out-list {
+    height: 35px;
+    padding: 0;
+    margin: 12px 0 0 10px;
+    list-style: none;
+}
+
+.filter-params .fly-out-list ul {
+    padding: 10px 5px 10px 12px;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    right: -4px;
+    top: 33px;
+    display: none;
+    border-radius: 68px;
+    background-color: #FFFFFF;
+    border-color: #e8e8e8;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.07);
+    white-space: nowrap;
+}
+
+.filter-params .fly-out-list > li {
+    float: left;
+    position: relative;
+}
+
+.filter-params .fly-out-list ul li.active a:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-image: url("../img/bullet-list-active.png");
+    float: left;
+    margin-left: -10px;
+    margin-top: 15px;
+}
+
+.filter-params .fly-out-list ul li.active a {
+    color: #f56728;
+}
+
+.filter-params .fly-out-list ul li.active a span {
+    border-bottom: 1px solid #fddfd7;
+}
+
+.filter-params .fly-out-list ul li.active a:hover span {
+    border-bottom: 1px solid #fddfd7;
+}
+
+.filter-params .fly-out-list > li > a {
+    display: block;
+    float: left;
+    font: 15px/35px "PT Sans", "Myriad Pro", "Arial", sans-serif;
+    text-decoration: none;
+    padding: 0 10px;
+    outline: 0;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.filter-params .fly-out-list > li > a.drop {
+    padding: 0 15px 0 10px;
+    background: url("../img/bullet-flyout-closed.png") no-repeat right 16px;
+    color: #6B7988;
+}
+
+.filter-params .fly-out-list > li > a.drop:hover {
+    color: #2c6abb;
+}
+
+.filter-params .fly-out-list img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.filter-params .fly-out-list ul li a {
+    display: block;
+    white-space: nowrap;
+    padding: 0 24px;
+    font: 15px/22px "PT Sans", "Myriad Pro", "Arial", sans-serif;
+    text-decoration: none;
+    color: #6B7988;
+    line-height: 30px;
+}
+
+.filter-params .fly-out-list ul li a:hover span {
+    border-bottom: 1px solid #dcdee1;
+}
+
+.filter-params .fly-out-list > li > a:focus {
+    color: #6B7988;
+}
+
+.filter-params .fly-out-list > li > a:hover {
+    color: #2c6abb;
+}
+
+.filter-params .fly-out-list > li > a.drop:focus {
+    line-height: 35px;
+    background: url("../img/bullet-flyout-open.png") no-repeat right 16px;
+}
+
+.filter-params .fly-out-list > li > a:focus ~ ul {
+    display: block;
+}
+
+.filter-params .fly-out-list > li > a:focus + img {
+    display: block;
+}
+
+.filter-params .fly-out-list ul:hover {
+    display: block;
+}
+
+/*Фильтр More*/
+
+.filter-more .fly-out-list {
+    padding: 0;
+    list-style: none;
+}
+
+.filter-more .fly-out-list ul {
+    padding: 10px 4px 10px 8px;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: none;
+    border-radius: 68px;
+    background-color: #FFFFFF;
+    border-color: #e8e8e8;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.07);
+    white-space: nowrap;
+    z-index: 9;
+}
+
+.filter-more .fly-out-list > li {
+    float: left;
+    position: relative;
+}
+
+.filter-more .fly-out-list ul li.active a:hover span {
+    border-bottom: 1px solid #fddfd7;
+}
+
+.filter-more .fly-out-list > li > a {
+    display: block;
+    float: left;
+    font: 13px/35px "PT Sans", "Myriad Pro", "Arial", sans-serif;
+    text-decoration: none;
+    outline: 0;
+    position: relative;
+    z-index: 10;
+    color: #222222;
+}
+
+.filter-more .fly-out-list > li > a.drop {
+    background-image: url("../img/three-points.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 35px;
+    height: 25px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.filter-more .fly-out-list > li > a.drop:hover {
+    background-color: #cdcdcd;
+}
+
+.filter-more .fly-out-list > li > a.drop:hover {
+
+}
+
+.filter-more .fly-out-list img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.filter-more .fly-out-list ul li a {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 28px;
+}
+
+.filter-more .fly-out-list ul li a span {
+    color: #222222;
+}
+
+.filter-more .fly-out-list ul li a:hover span {
+    border-bottom: 1px solid #dcdee1;
+    color: #1D648D;
+}
+
+.filter-more .fly-out-list > li > a:focus {
+    color: #6B7988;
+}
+
+.filter-more .fly-out-list > li > a:hover {
+    color: #2c6abb;
+}
+
+.filter-more .fly-out-list > li > a.drop:focus {
+    background-color: #cdcdcd;
+}
+
+.filter-more .fly-out-list > li > a:focus ~ ul {
+    display: block;
+}
+
+.filter-more .fly-out-list > li > a:focus + img {
+    display: block;
+}
+
+.filter-more .fly-out-list ul:hover {
+    display: block;
+}
+
+/*Фильтр Поделиться*/
+
+span.share-title {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.filter-share .fly-out-list {
+    padding: 0;
+    list-style: none;
+}
+
+.filter-share .fly-out-list ul {
+    padding: 10px 4px 10px 8px;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: none;
+    border-radius: 68px;
+    background-color: #FFFFFF;
+    border-color: #e8e8e8;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.07);
+    white-space: nowrap;
+    z-index: 9;
+}
+
+.filter-share .fly-out-list > li {
+    float: left;
+    position: relative;
+}
+
+.filter-share .fly-out-list ul li.active a:hover span {
+    border-bottom: 1px solid #fddfd7;
+}
+
+.filter-share .fly-out-list > li > a {
+    display: block;
+    float: left;
+    font: 13px/35px "PT Sans", "Myriad Pro", "Arial", sans-serif;
+    text-decoration: none;
+    outline: 0;
+    position: relative;
+    z-index: 10;
+    color: #222222;
+}
+
+.filter-share .fly-out-list > li > a.drop {
+    background-image: url("../img/share.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 35px;
+    height: 25px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 0;
+}
+
+.filter-share .fly-out-list > li > a.drop:hover {
+    background-color: #cdcdcd;
+}
+
+.filter-share .fly-out-list > li > a.drop:hover {
+
+}
+
+.filter-share .fly-out-list img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.filter-share .fly-out-list ul li a {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 13px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 28px;
+}
+
+.filter-share .fly-out-list ul li a span {
+    color: #222222;
+}
+
+.filter-share .fly-out-list ul li a:hover span {
+    border-bottom: 1px solid #dcdee1;
+    color: #1D648D;
+}
+
+.filter-share .fly-out-list > li > a:focus {
+    color: #6B7988;
+}
+
+.filter-share .fly-out-list > li > a:hover {
+    color: #2c6abb;
+}
+
+.filter-share .fly-out-list > li > a.drop:focus {
+    background-color: #cdcdcd;
+}
+
+.filter-share .fly-out-list > li > a:focus ~ ul {
+    display: block;
+}
+
+.filter-share .fly-out-list > li > a:focus + img {
+    display: block;
+}
+
+.filter-share .fly-out-list ul:hover {
+    display: block;
+}
+
+/*Фильтр like*/
+
+.like-social .fly-out-list {
+    padding: 0;
+    list-style: none;
+}
+
+.like-social .fly-out-list ul {
+    padding: 10px 4px 10px 8px;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: none;
+    border-radius: 68px;
+    background-color: #FFFFFF;
+    border-color: #e8e8e8;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.07);
+    white-space: nowrap;
+    z-index: 9;
+}
+
+.like-social .fly-out-list > li {
+    float: left;
+    position: relative;
+}
+
+.like-social .fly-out-list ul li.active a:hover span {
+    border-bottom: 1px solid #fddfd7;
+}
+
+.like-social .fly-out-list > li > a {
+    display: block;
+    float: left;
+    font: 13px/35px "PT Sans", "Myriad Pro", "Arial", sans-serif;
+    text-decoration: none;
+    outline: 0;
+    position: relative;
+    z-index: 10;
+    color: #222222;
+}
+
+.like-social .fly-out-list > li > a.drop {
+    background-image: url("../img/like-default.png");
+    background-repeat: no-repeat;
+    background-position: 7px 8px;
+    height: 25px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+    padding: 0;
+    padding-left: 22px;
+    color: #8c8c8c;
+    font-weight: normal;
+    padding-right: 7px;
+    line-height: 24px;
+}
+
+.like-social .fly-out-list > li > a.drop:hover {
+    background-image: url("../img/like-default-hover.png");
+    background-color: #7fbc3f;
+    color: #ffffff;
+
+}
+
+.like-social .fly-out-list > li > a.drop:hover {
+
+}
+
+.filter-share .fly-out-list img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.like-social .fly-out-list ul li a {
+    display: block;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 28px;
+}
+
+.like-social .fly-out-list ul li a span {
+    color: #222222;
+}
+
+.like-social .fly-out-list ul li a:hover span {
+    border-bottom: 1px solid #dcdee1;
+    color: #1D648D;
+}
+
+.like-social .fly-out-list > li > a:focus {
+    color: #6B7988;
+}
+
+.like-social .fly-out-list > li > a:hover {
+    color: #2c6abb;
+}
+
+.like-social .fly-out-list > li > a.drop:focus {
+    background-image: url("../img/like-default-hover.png");
+    background-color: #7fbc3f;
+    color: #ffffff;
+}
+
+.like-social .fly-out-list > li > a:focus ~ ul {
+    display: block;
+}
+
+.like-social .fly-out-list > li > a:focus + img {
+    display: block;
+}
+
+.like-social .fly-out-list ul:hover {
+    display: block;
+}

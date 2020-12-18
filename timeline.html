@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Результат поиска | Readly.RU</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flexslider.css"/>
+    <link rel="stylesheet" href="css/jquery.fancybox.css"/>
+    <!--<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>-->
+    <!-- кастомный скроллбар в информере -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar_informer.css"/>
+    <link rel="stylesheet" href="css/new.css">
+    <!-- Новые стили -->
+    <link rel="stylesheet" href="css/notifications.css">
+    <!-- Уведомления в header'e -->
+    <link rel="stylesheet" href="css/tabbed-panels.css">
+    <!-- Панели вкладок -->
+    <link rel="stylesheet" href="css/search-results.css">
+    <!-- Стили для страницы результата поиска -->
+    <link rel="stylesheet" href="css/flyout-menus.css">
+    <!-- Фильры -->
+    <link rel="stylesheet" href="css/start-discussion.css">
+    <!-- Спойлер START DISCUSSION -->
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.knob.js"></script>
+    <!-- скрипт круговой диаграмы оценки книги -->
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <!-- кастомный скролбар в поиске -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dropbox.js"></script>
+    <!-- Кастомный select, (на странице каталога выбор жанра) -->
+    <script src="js/profile.js"></script>
+    <!-- Выпадающее меню профиля в хедере -->
+    <!-- Скролл для информера -->
+    <script src="js/scroll-informer.js"></script>
+
+
+</head>
+<body class="">
+<div class="page-wrapper inner">
+<header class="top-panel inner clearfix">
+    <div class="wrapper">
+        <div class="header--logo"><a href="#" title="Readly - найди свою книгу"></a></div>
+        <div class="search-form _top">
+            <form action="#">
+                <fieldset>
+                    <div class="search-block--text-input">
+                        <input class="" type="text" placeholder="Поиск книги или автора..."/>
+                        <input class="search-block--input-btn" type="button" value="НАЙТИ"/>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="search-dropdown" id="searchDropdown">
+                <!-- Search results -->
+            </div>
+        </div>
+        <!--Notifications-->
+        <div class="header--notifications header--notifications-active">
+            <div class="header-notifications--toggler"><span class="header-notifications--counter"></span></div>
+            <div class="header-notifications--dropdown">
+                <div class="notifications-header clearfix"><span
+                        class="notifications-header-title">Уведомления:</span><span
+                        class="notifications-header-counter">3</span></div>
+                <div id="header-informer" class="notifications-index-scroll">
+                    <ul class="notifications-list">
+                        <li><a class="delete-notification" href="#" title="Удалить!"></a><a class="notification-name"
+                                                                                            href="#">Подсказка</a>
+
+                            <div class="notification-text">Поздравляем! Вы только что зарегистрировались на Readly, для
+                                ознакомления работы с сервисом
+                                рекомендуем ознакомиться с <a href="#">инструкцией</a>.
+                            </div>
+                        </li>
+                        <li><a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name"
+                                                                                             href="#">Новости</a>
+
+                            <div class="notification-text">Уважаемые читатели! Добавлена новая <a href="#">подборка
+                                книг</a> с неожиданными концовками
+                            </div>
+                        </li>
+                        <li><a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name"
+                                                                                             href="#">Подсказка</a>
+
+                            <div class="notification-text">Добавляйте книги к себе в прочитанное. Чем больше книг Вы
+                                прочитали, тем точнее становятся рекомендации.
+                            </div>
+                        </li>
+                        <li><a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name"
+                                                                                             href="#">Подсказка</a>
+
+                            <div class="notification-text">Поздравляем! Вы только что зарегистрировались
+                                на Readly, для ознакомления работы с сервисом
+                                рекомендуем ознакомиться с <a href="#">инструкцией</a>.
+                            </div>
+                        </li>
+                        <li><a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name"
+                                                                                             href="#">Новости</a>
+
+                            <div class="notification-text">Уважаемые читатели! Добавлена новая <a href="#">подборка
+                                книг</a> с неожиданными концовками
+                            </div>
+                        </li>
+                        <li><a class="delete-notification" href="#" title="Удалить!"></a> <a class="notification-name"
+                                                                                             href="#">Подсказка</a>
+
+                            <div class="notification-text">Добавляйте книги к себе в прочитанное. Чем больше книг Вы
+                                прочитали, тем точнее становятся рекомендации.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="notifications-header-footer"><a href="#">Очистить историю</a></div>
+            </div>
+        </div>
+        <!--End Notifications-->
+
+        <div class="header--profile">
+            <div class="header-profile--toggler"><i class="header-profile--menu-icon"></i>
+
+                <div class="header-profile--ava"><img src="img/content/user-ava_73px.jpg" alt="User"/></div>
+                <span class="header-profile--counter">3</span></div>
+            <div class="header-profile--dropdown">
+                <ul class="profile-dropdown-menu">
+                    <li><a href="#"><i class="icon activity"></i>Активность<span
+                            class="counter">352</span></a></a></li>
+                    <li><a href="#"><i class="icon reviews"></i> Рецензии <span class="counter">5</span></a></li>
+                    <li><a href="#"><i class="icon discussion"></i> Обсуждения <span
+                            class="counter">48</span></a></a></li>
+                    <li><a href="#"><i class="icon settings"></i> Настройки</a></li>
+                    <li><a href="#"><i class="icon logout"></i> Выйти</a></li>
+                </ul>
+            </div>
+            <div class="header-profile--label">Мои книги</div>
+        </div>
+    </div>
+</header>
+<header class="sub-header">
+    <div class="wrapper clearfix">
+        <nav class="header--nav">
+            <ul>
+                <li><a href="#" class="active">КНИГИ</a></li>
+                <li><a href="#">РЕКОМЕНДАЦИИ</a></li>
+                <li><a href="#">СПИСКИ</a></li>
+                <li><a href="#">ЧИТАТЕЛИ</a></li>
+                <li><a href="#">ОБСУЖДЕНИЯ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="wrapper content clearfix">
+
+<section class="content-left">
+<nav class="tape-select">
+    <ul>
+        <li class="active"><a href="#">Общая лента</a></li>
+        <li><a href="#">Персональная</a></li>
+    </ul>
+</nav>
+<div class="filter-params">
+    <ul class="fly-out-list">
+        <li><a class="drop" href="#x" tabindex="1">Фильтры</a>
+
+            <ul>
+                <li class="active"><a href="#"><span>Все события</span></a></li>
+                <li><a href="#"><span>Рецензии</span></a></li>
+                <li><a href="#"><span>Комментарии</span></a></li>
+                <li><a href="#"><span>Обсуждения</span></a></li>
+                <li><a href="#"><span>Цитаты</span></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="filter-search-results-container">
+<div class="filter-panel-index">
+
+
+<div class="page-column-main _timeline">
+<section class="review-timeline-list">
+<nav class="nav-filter">
+    <ul class="nav-filter-list">
+        <li class="active"><a href="#">Последнее</a></li>
+        <li><a href="#">Популярное</a></li>
+        <li><a href="#">Новое</a></li>
+    </ul>
+</nav>
+<div ng-controller="TimelineController" id="readly" class="ng-scope">
+
+<div class="rtl--start-discussion createpost clearfix">
+
+    <div class="start-discussion-input-layer">
+        <input type="text" ng-model="topic_title" placeholder="Начать новое обсуждение"
+               class="sd--input ng-pristine ng-valid">
+    </div>
+
+    <div class="hidden-controls">
+        <div class="start-discussion-input-layer-drop clearfix">
+            <a class="add-discussion" href="#">Добавить заголовок?</a>
+
+            <div class="add-discusiion-header clearfix">
+                <div class="add-discusiion-header-input">
+                    <input type="text" ng-model="topic_title" placeholder="Начать новое обсуждение"
+                           class="sd--input ng-pristine ng-valid">
+                </div>
+                <a class="delete-header-input" href="#">Убрать?</a>
+            </div>
+
+            <textarea ng-model="topic_text" placeholder="Начать новое обсуждение"
+                      class="sd--input ng-pristine ng-valid"></textarea>
+
+            <div class="start-dicsussion-action-block">
+                <div class="start-dicsussion-action-block-item">
+                    <input type="checkbox" name="checkbox" id="checkbox"/>
+                    <label for="checkbox">Только для подписчиков</label>
+                </div>
+
+                <a ng-click="saveTopic()" class="btn-violet create-btn" href="#" rel="nofollow">Создать</a>
+                <a class="cansel-discussion" href="#">Отменить</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ngRepeat: item in new_items -->
+
+<div class="search-results-description">
+    Поиск по результату запроса: <a class="search-query" href="#">#ЧтоПочитать</a> <span class="number-referenses">(найдено 2 упоминания)</span>
+</div>
+
+<div class="discussion-wrap">
+
+    <div class="discussion-item clearfix">
+        <div class="discussion-item-user-avatar">
+            <a class="user-avatar-50-50" href="#">
+                <img src="img/content/user-6.png">
+            </a>
+        </div>
+
+        <div class="user-name">
+            <a class="user-name-index" href="#">Алена Андреева</a>
+            <a href="#">@juice</a>
+        </div>
+        <div class="discussion-item-descripiton">
+            <span>Создала обсуждение</span><span class="dashed-row"><span>10 апреля</span><span>8:40</span></span>
+
+            <div class="stars-rating"><span>Оценка книге:</span>
+
+                <div class="stars-rating-index"><img src="img/rating-cap.png"></div>
+                <span class="stars-rating-counts">8/10</span>
+            </div>
+        </div>
+        <div class="reviews-status"><img src="img/positive.png"></div>
+        <div class="discussion-item-index clearfix">
+
+            <div class="discussion-item-text clearfix">
+                <a class="discussion-item-header" href="#">Хочу начать читать новую книгу, нужна Ваша помощь
+                    друзья</a>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nibh lobortis, iaculis lorem
+                    tristique, lobortis tellus. Nam quis nisi ultrices, condimentum metus <a href="#"
+                                                                                             class="search-query">#ЧтоПочитать</a>
+                    <span>#Фантастика</span> vitae, eleifend nunc. Nulla
+                    facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris vel neque
+                    mollis
+                    aliquet. Maecenas convallis ornare sem, ullamcorper aliquam lacus tincidunt fringilla. Donec a
+                    tellus
+                    suscipit, gravida turpis at, porttitor diam.</p>
+                <blockquote>
+                    Ut convallis, nunc lacinia porta varius, nibh libero
+                    vehicula nisl, auctor dignissim erat tellus sit amet magna. Suspendisse dignissim aliquet tortor,
+                    quis
+                    consequat dolor dapibus vel. Aliquam scelerisque malesuada mauris, eu fringilla sapien vestibulum
+                    nec.
+                    Ut sapien libero, fermentum eget dui et, aliquam luctus nibh.
+                </blockquote>
+
+
+                <p>Ut convallis, nunc lacinia porta varius, nibh libero
+                    vehicula nisl, auctor dignissim erat tellus sit amet magna. Suspendisse dignissim aliquet tortor,
+                    quis
+                    consequat dolor dapibus vel. Aliquam scelerisque malesuada mauris, eu fringilla sapien vestibulum
+                    nec.
+                    Ut sapien libero, fermentum eget dui et, aliquam luctus nibh.</p>
+            </div>
+            <a class="reveal-block" href="#"><span>Раскрыть</span></a>
+
+            <div class="reveal-block-index clearfix">
+                <div class="book-pic">
+                    <img src="img/tmp/book-cap.png">
+                </div>
+                <a class="book-name" href="#">Как стать лидером в своей нише</a>
+                <span class="book-autor">Майк Микаловиц</span>
+            </div>
+            <div class="discussion-item-filter">
+                <div class="discussion-item-filter-item">
+                    <div class="filter-more">
+                        <ul class="fly-out-list">
+                            <li>
+                                <a class="drop tooltips" href="#x" tabindex="1">
+                                    <span>Опции</span>
+                                </a>
+                                <ul>
+                                    <li><a href="#"><span>Добавить в избранное</span></a></li>
+                                    <li><a href="#"><span>Пожаловаться</span></a></li>
+                                    <li><a href="#"><span>Открыть в новом окне</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="discussion-item-filter-item">
+                    <div class="filter-share">
+                        <ul class="fly-out-list">
+                            <li>
+                                <a class="drop tooltips" href="#x" tabindex="1">
+                                    <span>Поделиться</span>
+                                </a>
+                                <ul>
+                                    <li><span class="share-title">Поделиться:</span></li>
+                                    <li><a href="#"><span>ВКонтакте</span></a></li>
+                                    <li><a href="#"><span>Твиттер</span></a></li>
+                                    <li><a href="#"><span>Одноклассники</span></a></li>
+                                    <li><a href="#"><span>Фейсбук</span></a></li>
+                                    <li><a href="#"><span>Мой Мир</span></a></li>
+                                    <li><a href="#"><span>Googe+</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="discussion-item-filter-item-linked">
+                    <span class="vote-question">Полезная рецензия?</span>
+
+                    <div class="vote-block">
+                        <a class="vote-yes" href="#">Да</a>
+                        /
+                        <a class="vote-no" href="#">Нет</a>
+                        <span class="vote-digit-yes">10</span>
+                        /
+                        <span class="vote-digit-no">40</span>
+                    </div>
+                </div>
+
+
+                <div class="discussion-item-filter-item-linked">
+                    <a class="like-social tooltips" href="#">+10
+                        <span>Информация</span></a>
+                </div>
+
+
+            </div>
+            <a class="comment-first" href="#"><span>Прокомментировать</span></a>
+        </div>
+    </div>
+</div>
+<div class="discussion-item clearfix">
+    <div class="discussion-item-user-avatar">
+        <a class="user-avatar-50-50" href="#">
+            <img src="img/content/user-2.png">
+        </a>
+    </div>
+    <div class="user-name">
+        <a href="#"><span class="user-name-index">Анна Еромоленко</span>
+            @cvety_zla</a>
+    </div>
+    <div class="discussion-item-descripiton">
+        <span>Написала комментарий к книге</span><span class="dashed-row"><span>10 апреля</span><span>8:40</span></span>
+    </div>
+    <div class="discussion-item-index clearfix">
+        <div class="discussion-item-text clearfix">
+
+            <a class="book-name-tagged" href="#"><span>Великий Гетсби</span></a>
+
+            <p>Книги, от которых ожидаешь большего. Воспользовала <a href="#"
+                                                                     class="search-query">#ЧтоПочитать</a>.
+                После прочтения даже странно становится, что кто-то может ими восхищаться. Меня оставили
+                абсолютно равнодушной "Грозовой перевал" и "Портрет Дориана Грея". А Вас?
+            </p>
+        </div>
+        <div class="discussion-item-filter">
+            <div class="discussion-item-filter-item">
+                <div class="filter-more">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop tooltips" href="#x" tabindex="1">
+                                <span>Опции</span>
+                            </a>
+
+                            <ul>
+                                <li><a href="#"><span>Добавить в избранное</span></a></li>
+                                <li><a href="#"><span>Пожаловаться</span></a></li>
+                                <li><a href="#"><span>Открыть в новом окне</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item">
+                <div class="filter-share">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop tooltips" href="#x" tabindex="1">
+                                <span>Поделиться</span>
+                            </a>
+
+
+                            <ul>
+                                <li><span class="share-title">Поделиться:</span></li>
+                                <li><a href="#"><span>ВКонтакте</span></a></li>
+                                <li><a href="#"><span>Твиттер</span></a></li>
+                                <li><a href="#"><span>Одноклассники</span></a></li>
+                                <li><a href="#"><span>Фейсбук</span></a></li>
+                                <li><a href="#"><span>Мой Мир</span></a></li>
+                                <li><a href="#"><span>Googe+</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item-linked">
+                <a class="like-social tooltips" href="#">+10
+                    <span>Информация</span></a>
+            </div>
+
+
+        </div>
+        <a class="comment-first" href="#"><span>15 комментариев</span></a>
+    </div>
+
+    <div class="discussion-item clearfix">
+        <div class="discussion-item-user-avatar">
+            <a class="user-avatar-50-50" href="#">
+                <img src="img/content/user-3.png">
+            </a>
+        </div>
+        <div class="user-name-smaller">
+            <a class="user-name-smaller-name" href="#">Анна Еромоленко</a>
+            <a class="user-name-smaller-nick" href="#">@cvety_zla</a>
+            <span class="date-time-post"><span>10 апреля</span><span>8:40</span></span>
+        </div>
+        <div class="discussion-item-comment">
+            <p>Книги, от которых ожидаешь большего. Воспользовала <a href="#"
+                                                                     class="search-query">#ЧтоПочитать</a>.
+                После прочтения даже странно становится, что кто-то может ими восхищаться. Меня оставили
+                абсолютно равнодушной "Грозовой перевал" и "Портрет Дориана Грея". А Вас?
+            </p>
+        </div>
+        <a class="send-reply" href="#"><span>Ответить</span></a>
+
+        <a class="like-info" href="#">+1</a>
+
+    </div>
+    <hr>
+    <div class="discussion-item clearfix">
+        <div class="discussion-item-user-avatar">
+            <a class="user-avatar-50-50" href="#">
+                <img src="img/content/user-4.png">
+            </a>
+        </div>
+        <div class="user-name-smaller">
+            <a class="user-name-smaller-name" href="#">Анна Еромоленко</a>
+            <a class="user-name-smaller-nick" href="#">@cvety_zla</a>
+            <span class="date-time-post"><span>10 апреля</span><span>8:40</span></span>
+        </div>
+        <div class="discussion-item-comment">
+            <p>Книги, от которых ожидаешь большего. Воспользовала <a href="#"
+                                                                     class="search-query">#ЧтоПочитать</a>.
+                После прочтения даже странно становится, что кто-то может ими восхищаться. Меня оставили
+                абсолютно равнодушной "Грозовой перевал" и "Портрет Дориана Грея". А Вас?
+            </p>
+        </div>
+        <a class="send-reply" href="#"><span>Ответить</span></a>
+
+        <a class="like-info" href="#">10</a>
+    </div>
+    <hr>
+
+    <div class="discussion-item clearfix">
+        <div class="discussion-item-user-avatar">
+            <a class="user-avatar-50-50" href="#">
+                <img src="img/content/user-5.png">
+            </a>
+        </div>
+        <div class="user-name-smaller">
+            <a class="user-name-smaller-name" href="#">Анна Еромоленко</a>
+            <a class="user-name-smaller-nick" href="#">@cvety_zla</a>
+            <span class="date-time-post"><span>10 апреля</span><span>8:40</span></span>
+        </div>
+        <div class="discussion-item-comment">
+            <p>Книги, от которых ожидаешь большего. Воспользовала <a href="#"
+                                                                     class="search-query">#ЧтоПочитать</a>.
+                После прочтения даже странно становится, что кто-то может ими восхищаться. Меня оставили
+                абсолютно равнодушной "Грозовой перевал" и "Портрет Дориана Грея". А Вас?
+            </p>
+        </div>
+        <a class="send-reply" href="#"><span>Ответить</span></a>
+
+        <a class="like-info" href="#">20</a>
+    </div>
+
+    <div class="comment-block-bottom">
+        <div class="rtl--start-discussion createpost clearfix">
+
+            <div class="start-discussion-input-layer">
+                <input type="text" ng-model="topic_title" placeholder="Комментировать"
+                       class="sd--input ng-pristine ng-valid">
+            </div>
+
+            <div class="hidden-controls">
+                <div class="start-discussion-input-layer-drop clearfix">
+                    <a class="add-discussion" href="#">Добавить заголовок?</a>
+
+                    <div class="add-discusiion-header clearfix">
+                        <div class="add-discusiion-header-input">
+                            <input type="text" ng-model="topic_title" placeholder="Начать новое обсуждение"
+                                   class="sd--input ng-pristine ng-valid">
+                        </div>
+                        <a class="delete-header-input" href="#">Убрать?</a>
+                    </div>
+
+                    <textarea ng-model="topic_text" placeholder="Комментировать"
+                              class="sd--input ng-pristine ng-valid"></textarea>
+
+                    <div class="start-dicsussion-action-block">
+                        <div class="start-dicsussion-action-block-item">
+                            <input type="checkbox" name="checkbox" id="checkbox"/>
+                            <label for="checkbox">Только для подписчиков</label>
+                        </div>
+
+                        <a ng-click="saveTopic()" class="btn-violet create-btn" href="#" rel="nofollow">Создать</a>
+                        <a class="cansel-discussion" href="#">Отменить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="discussion-item clearfix">
+    <div class="discussion-item-user-avatar">
+        <a class="user-avatar-50-50" href="#">
+            <img src="img/content/user-6.png">
+        </a>
+    </div>
+
+    <div class="user-name">
+        <a class="user-name-index" href="#">Алена Андреева</a>
+        <a href="#">@juice</a>
+    </div>
+    <div class="discussion-item-descripiton">
+        <span>Создала обсуждение</span><span class="dashed-row"><span>10 апреля</span><span>8:40</span></span>
+
+        <div class="stars-rating"><span>Оценка книге:</span>
+
+            <div class="stars-rating-index"><img src="img/rating-cap.png"></div>
+            <span class="stars-rating-counts">8/10</span>
+        </div>
+    </div>
+    <div class="reviews-status"><img src="img/negative.png"></div>
+    <div class="discussion-item-index clearfix">
+
+        <div class="discussion-item-text clearfix">
+            <a class="discussion-item-header" href="#">Хочу начать читать новую книгу, нужна Ваша помощь
+                друзья</a>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nibh lobortis, iaculis lorem
+                tristique, lobortis tellus. Nam quis nisi ultrices, condimentum metus <a href="#" class="search-query">#ЧтоПочитать</a>
+                <span>#Фантастика</span> vitae, eleifend nunc. Nulla
+                facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris vel neque mollis
+                aliquet. Maecenas convallis ornare sem, ullamcorper aliquam lacus tincidunt fringilla. Donec a tellus
+                suscipit, gravida turpis at, porttitor diam.</p>
+
+            <p>Ut convallis, nunc lacinia porta varius, nibh libero
+                vehicula nisl, auctor dignissim erat tellus sit amet magna. Suspendisse dignissim aliquet tortor, quis
+                consequat dolor dapibus vel. Aliquam scelerisque malesuada mauris, eu fringilla sapien vestibulum nec.
+                Ut sapien libero, fermentum eget dui et, aliquam luctus nibh.</p>
+        </div>
+        <a class="reveal-block" href="#"><span>Раскрыть</span></a>
+
+        <div class="reveal-block-index clearfix">
+            <div class="book-pic">
+                <img src="img/tmp/book-cap.png">
+            </div>
+            <a class="book-name" href="#">Как стать лидером в своей нише</a>
+            <span class="book-autor">Майк Микаловиц</span>
+        </div>
+
+        <div class="discussion-item-filter">
+            <div class="discussion-item-filter-item">
+                <div class="filter-more">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop" href="#" tabindex="1">
+
+                            </a>
+
+                            <ul>
+                                <li><a href="#"><span>Добавить в избранное</span></a></li>
+                                <li><a href="#"><span>Пожаловаться</span></a></li>
+                                <li><a href="#"><span>Открыть в новом окне</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item">
+                <div class="filter-share">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop" href="#x" tabindex="1"></a>
+
+                            <ul>
+                                <li><span class="share-title">Поделиться:</span></li>
+                                <li><a href="#"><span>ВКонтакте</span></a></li>
+                                <li><a href="#"><span>Твиттер</span></a></li>
+                                <li><a href="#"><span>Одноклассники</span></a></li>
+                                <li><a href="#"><span>Фейсбук</span></a></li>
+                                <li><a href="#"><span>Мой Мир</span></a></li>
+                                <li><a href="#"><span>Googe+</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item-linked">
+                <a class="like-social tooltips" href="#">+10
+                    <span>Информация</span></a>
+            </div>
+
+
+        </div>
+        <a class="comment-first" href="#"><span>Прокомментировать</span></a>
+    </div>
+</div>
+
+
+<div class="discussion-item clearfix">
+    <div class="discussion-item-user-avatar">
+        <a class="user-avatar-50-50" href="#">
+            <img src="img/content/user-6.png">
+        </a>
+    </div>
+
+    <div class="user-name">
+        <a class="user-name-index" href="#">Алена Андреева</a>
+        <a href="#">@juice</a>
+    </div>
+    <div class="discussion-item-descripiton">
+        <span>Создала обсуждение</span><span class="dashed-row"><span>10 апреля</span><span>8:40</span></span>
+
+        <div class="stars-rating"><span>Оценка книге:</span>
+
+            <div class="stars-rating-index"><img src="img/rating-cap.png"></div>
+            <span class="stars-rating-counts">8/10</span>
+        </div>
+    </div>
+    <div class="reviews-status"><img src="img/negative.png"></div>
+    <div class="discussion-item-index clearfix">
+
+        <div class="discussion-item-text clearfix">
+            <a class="discussion-item-header" href="#">Хочу начать читать новую книгу, нужна Ваша помощь
+                друзья</a>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut nibh lobortis, iaculis lorem
+                tristique, lobortis tellus. Nam quis nisi ultrices, condimentum metus <a href="#" class="search-query">#ЧтоПочитать</a>
+                <span>#Фантастика</span> vitae, eleifend nunc. Nulla
+                facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae mauris vel neque mollis
+                aliquet. Maecenas convallis ornare sem, ullamcorper aliquam lacus tincidunt fringilla. Donec a tellus
+                suscipit, gravida turpis at, porttitor diam.</p>
+
+            <p>Ut convallis, nunc lacinia porta varius, nibh libero
+                vehicula nisl, auctor dignissim erat tellus sit amet magna. Suspendisse dignissim aliquet tortor, quis
+                consequat dolor dapibus vel. Aliquam scelerisque malesuada mauris, eu fringilla sapien vestibulum nec.
+                Ut sapien libero, fermentum eget dui et, aliquam luctus nibh.</p>
+        </div>
+        <a class="reveal-block" href="#"><span>Раскрыть</span></a>
+
+        <div class="reveal-block-index clearfix">
+            <div class="book-pic">
+                <img src="img/tmp/book-cap.png">
+            </div>
+            <a class="book-name" href="#">Как стать лидером в своей нише</a>
+            <span class="book-autor">Майк Микаловиц</span>
+        </div>
+
+        <div class="discussion-item-filter">
+            <div class="discussion-item-filter-item">
+                <div class="filter-more">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop" href="#" tabindex="1">
+
+                            </a>
+
+                            <ul>
+                                <li><a href="#"><span>Добавить в избранное</span></a></li>
+                                <li><a href="#"><span>Пожаловаться</span></a></li>
+                                <li><a href="#"><span>Открыть в новом окне</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item">
+                <div class="filter-share">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop" href="#x" tabindex="1"></a>
+
+                            <ul>
+                                <li><span class="share-title">Поделиться:</span></li>
+                                <li><a href="#"><span>ВКонтакте</span></a></li>
+                                <li><a href="#"><span>Твиттер</span></a></li>
+                                <li><a href="#"><span>Одноклассники</span></a></li>
+                                <li><a href="#"><span>Фейсбук</span></a></li>
+                                <li><a href="#"><span>Мой Мир</span></a></li>
+                                <li><a href="#"><span>Googe+</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item-linked">
+                <a class="like-social tooltips" href="#">+10
+                    <span>Информация</span></a>
+            </div>
+        </div>
+        <a class="comment-first" href="#"><span>Прокомментировать</span></a>
+    </div>
+</div>
+
+<div class="comment-block-bottom">
+    <div class="rtl--start-discussion createpost clearfix">
+
+        <div class="start-discussion-input-layer">
+            <input type="text" ng-model="topic_title" placeholder="Комментировать"
+                   class="sd--input ng-pristine ng-valid">
+        </div>
+
+        <div class="hidden-controls">
+            <div class="start-discussion-input-layer-drop clearfix">
+                <a class="add-discussion" href="#">Добавить заголовок?</a>
+
+                <div class="add-discusiion-header clearfix">
+                    <div class="add-discusiion-header-input">
+                        <input type="text" ng-model="topic_title" placeholder="Начать новое обсуждение"
+                               class="sd--input ng-pristine ng-valid">
+                    </div>
+                    <a class="delete-header-input" href="#">Убрать?</a>
+                </div>
+
+                <textarea ng-model="topic_text" placeholder="Начать новое обсуждение"
+                          class="sd--input ng-pristine ng-valid"></textarea>
+
+                <div class="start-dicsussion-action-block">
+                    <div class="start-dicsussion-action-block-item">
+                        <input type="checkbox" name="checkbox" id="checkbox"/>
+                        <label for="checkbox">Только для подписчиков</label>
+                    </div>
+
+                    <a ng-click="saveTopic()" class="btn-violet create-btn" href="#" rel="nofollow">Создать</a>
+                    <a class="cansel-discussion" href="#">Отменить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="discussion-item clearfix">
+    <div class="discussion-item-user-avatar">
+        <a class="user-avatar-50-50" href="#">
+            <img src="img/content/user-1.png">
+        </a>
+    </div>
+
+    <div class="user-name">
+        <a class="user-name-index" href="#">Алена Андреева</a>
+        <a href="#">@juice</a>
+    </div>
+    <div class="discussion-item-descripiton">
+        <span>Создала обсуждение</span><span class="dashed-row"><span>10 апреля</span><span>8:40</span></span>
+    </div>
+    <div class="discussion-item-index clearfix">
+        <div class="discussion-item-text clearfix">
+            <a class="discussion-item-header" href="#">Хочу начать читать новую книгу, нужна Ваша помощь
+                друзья</a>
+
+            <p>Очень хочется прочитать что-то легкое, чтобы читалось на одном дыхании, и желательно с не сильно
+                большим объемом страниц. <a href="#" class="search-query">#ЧтоПочитать</a>
+                <span>#Фантастика</span></p>
+        </div>
+        <div class="discussion-item-filter">
+            <div class="discussion-item-filter-item">
+                <div class="filter-more">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop" href="#x" tabindex="1">
+
+                            </a>
+
+                            <ul>
+                                <li><a href="#"><span>Добавить в избранное</span></a></li>
+                                <li><a href="#"><span>Пожаловаться</span></a></li>
+                                <li><a href="#"><span>Открыть в новом окне</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item">
+                <div class="filter-share">
+                    <ul class="fly-out-list">
+                        <li>
+                            <a class="drop" href="#x" tabindex="1"></a>
+
+                            <ul>
+                                <li><span class="share-title">Поделиться:</span></li>
+                                <li><a href="#"><span>ВКонтакте</span></a></li>
+                                <li><a href="#"><span>Твиттер</span></a></li>
+                                <li><a href="#"><span>Одноклассники</span></a></li>
+                                <li><a href="#"><span>Фейсбук</span></a></li>
+                                <li><a href="#"><span>Мой Мир</span></a></li>
+                                <li><a href="#"><span>Googe+</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="discussion-item-filter-item-linked">
+                <a class="like-social tooltips" href="#">+10
+                    <span>Информация</span></a>
+            </div>
+
+
+        </div>
+        <a class="comment-first" href="#"><span>Прокомментировать</span></a>
+    </div>
+</div>
+</div>
+</section>
+
+<aside class="sidebar-right">
+    <div class="sidebar-section">
+        <span class="sidebar-section-header">ПОИСК</span>
+
+        <input type="text" class="input-text-default" placeholder="Найти тему...">
+
+        <div class="button-search-set">
+            <input class="button-search" type="button" title="Поиск">
+        </div>
+    </div>
+
+    <div class="sidebar-section">
+        <span class="sidebar-section-header">Популярные темы</span>
+        <ul class="themes-list">
+            <li><a href="#">#Посоветуйте книгу</a></li>
+            <li><a href="#">#Сейчас читаю</a></li>
+            <li><a href="#">#Ищу книгу</a></li>
+            <li><a href="#">#Лучшая книга 2014</a></li>
+            <li><a href="#">#Читательские подборки</a></li>
+        </ul>
+    </div>
+
+    <div class="sidebar-section">
+        <span class="sidebar-section-header">Самые активные читатели</span>
+        <ul class="users-list-default">
+            <li>
+                <div class="themes-list-user-avatar">
+                    <div class="user-avatar-45-45">
+                        <a href="#"><img src="img/content/user-1.png"></a>
+                    </div>
+                </div>
+                <div class="user-nick-name">
+                    <a href="#">@juice</a>
+                    <a class="user-nick-name-index" href="#">Алена Андреева</a>
+                </div>
+                <div class="user-commments">40 комментариев</div>
+            </li>
+
+            <li>
+                <div class="themes-list-user-avatar">
+                    <div class="user-avatar-45-45">
+                        <a href="#"><img src="img/content/user-2.png"></a>
+                    </div>
+                </div>
+                <div class="user-nick-name">
+                    <a href="#">@juice</a>
+                    <a class="user-nick-name-index" href="#">Алена Андреева</a>
+                </div>
+                <div class="user-commments">40 комментариев</div>
+            </li>
+
+
+            <li>
+                <div class="themes-list-user-avatar">
+                    <div class="user-avatar-45-45">
+                        <a href="#"><img src="img/content/user-3.png"></a>
+                    </div>
+                </div>
+                <div class="user-nick-name">
+                    <a href="#">@juice</a>
+                    <a class="user-nick-name-index" href="#">Алена Андреева</a>
+
+                </div>
+                <div class="user-commments">40 комментариев</div>
+            </li>
+
+            <li>
+                <div class="themes-list-user-avatar">
+                    <div class="user-avatar-45-45">
+                        <a href="#"><img src="img/content/user-4.png"></a>
+                    </div>
+                </div>
+                <div class="user-nick-name">
+                    <a href="#">@juice</a>
+                    <a class="user-nick-name-index" href="#">Алена Андреева</a>
+
+                </div>
+                <div class="user-commments">40 комментариев</div>
+            </li>
+
+            <li>
+                <div class="themes-list-user-avatar">
+                    <div class="user-avatar-45-45">
+                        <a href="#"><img src="img/content/user-5.png"></a>
+                    </div>
+                </div>
+                <div class="user-nick-name">
+                    <a href="#">@juice</a>
+                    <a class="user-nick-name-index" href="#">Алена Андреева</a>
+                </div>
+                <div class="user-commments">40 комментариев</div>
+            </li>
+
+
+        </ul>
+    </div>
+
+
+</aside>
+
+
+</div>
+
+</section>
+
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+</div>
+<footer>
+    <div class="wrapper">
+        <div class="footer--logo"><a href="#" title="Readly - найди свою книгу"></a></div>
+        <nav class="footer--nav"><a href="#">КНИГИ</a> <a href="#">РЕКОМЕНДАЦИИ</a> <a href="#">СПИСКИ</a> <a href="#">ЧИТАТЕЛИ</a>
+            <a href="#">ОБСУЖДЕНИЯ</a></nav>
+        <div class="footer--copyright"> EQWILE © 2013</div>
+    </div>
+</footer>
+</body>
+</html>
